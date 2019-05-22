@@ -1,0 +1,7 @@
+# Must be located in ./public
+RewriteEngine On
+RewriteRule ^ - [L]
+
+# Fallback all other routes to index.html
+RewriteRule ^ %{ENV:PUBLIC_URL}/index.html [L]
+
